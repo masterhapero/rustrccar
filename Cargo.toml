@@ -1,0 +1,17 @@
+[package]
+name = "rustrccar"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+hidapi = "2.6.0"
+# hidapi = "0.4.1"
+# dualshock4 = "0.1.1"
+# dual-shock4-controller = "0.1.0"
+dualshock4 = { git = "ssh://git@github.com/masterhapero/dualshock4-rust.git", branch = "master" }
+vesc-comm = {  git = "ssh://git@github.com/masterhapero/vesc-comm", branch = "master" }
+# For VESC
+serialport = "4.3.0"
+embedded-hal = "0.2.7"
+nb = "1.1.0"
+rb = "0.4.1"

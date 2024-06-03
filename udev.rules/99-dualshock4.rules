@@ -1,0 +1,11 @@
+# PS4 DualSense controller
+# USB hidraw
+#KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="09cc", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+# Bluetooth
+KERNEL=="hidraw*", KERNELS=="*054C:09CC*", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+
+# NOTE! 
+# "sudo udevadm control --reload-rules"
+# "journalctl |grep hidraw"
+# Mar 29 11:30:57 Moebels kernel: playstation 0005:054C:09CC.0009: hidraw5: BLUETOOTH HID v1.00 Gamepad [Wireless Controller] on 00:93:37:fa:46:72
+# Kernel module (6.5.0-26-generic)  hid_playstation
